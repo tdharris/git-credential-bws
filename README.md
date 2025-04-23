@@ -24,7 +24,7 @@ Before using this credential helper, ensure you have the following installed and
 
 Executing the following command will download the script and make it executable:
 
-```bash
+```console
 curl -s https://raw.githubusercontent.com/tdharris/git-credential-bws/main/installer.sh | bash -s
 ```
 
@@ -33,7 +33,7 @@ curl -s https://raw.githubusercontent.com/tdharris/git-credential-bws/main/insta
 1. Download the `git-credential-bws` script and place it in a directory in your `PATH` (e.g., `/usr/local/bin`).
 2. Make the script executable:
 
-    ```bash
+    ```console
     chmod +x /path/to/git-credential-bws
     ```
 
@@ -45,13 +45,13 @@ To use the helper, you need to configure Git to use it as a credential helper. Y
     * Create a secret in Bitwarden Secrets Manager.
     * The **value** of this secret **must be a JSON string** containing key-value pairs for your credentials.
     * Example Secret Value:
-        ```json
+        ```jsonc
         {
           "GIT_USER": "my-github-username", // Optional
           "GITHUB_OAUTH_TOKEN": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
         }
         ```
-        ```json
+        ```jsonc
         {
           "GIT_USER": "my-github-username", // Optional
           "GITLAB_TOKEN": "glpat-yyyyyyyyyyyyyyyyyyyyyyyyyyyy"
