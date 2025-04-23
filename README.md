@@ -53,7 +53,7 @@ To use the helper, you need to configure Git to use it as a credential helper. Y
         ```
         ```jsonc
         {
-          "GIT_USER": "my-github-username", // Optional
+          "GIT_USER": "my-gitlab-username", // Optional
           "GITLAB_TOKEN": "glpat-yyyyyyyyyyyyyyyyyyyyyyyyyyyy"
         }
         ```
