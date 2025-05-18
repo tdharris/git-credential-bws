@@ -99,3 +99,23 @@ To use the helper, you need to configure Git to use it as a credential helper. Y
             ```
 
     * Replace `YOUR_SECRET_ID` with your actual Bitwarden Secret ID.
+
+## Troubleshooting
+
+If you encounter any issues, you can simulate how Git interacts with the credential helper by running the command manually:
+
+```bash
+echo "host=domain.com"
+echo "protocol=https"
+echo "" | git-credential-bws -s <secret_id> -p <JSON_ATTRIBUTE_FOR_PASSWORD> get
+```
+
+For example, to test the GitHub configuration:
+
+```bash
+echo "host=github.com"
+echo "protocol=https"
+echo "" | git-credential-bws -s <secret_id> -p GITHUB_OAUTH_TOKEN get
+```
+
+**Note**: Replace `<secret_id>` with the actual ID of your Bitwarden secret.
